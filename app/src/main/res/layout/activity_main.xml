@@ -1,18 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/et_id"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="主键(选填)" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="姓名(必填)" />
+
+        <EditText
+            android:id="@+id/et_sex"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="性别" />
+
+        <EditText
+            android:id="@+id/et_age"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="年龄" />
+
+        <EditText
+            android:id="@+id/et_height"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="身高" />
+
+        <EditText
+            android:id="@+id/et_weight"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="体重" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/CommonTextSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="添加" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                style="@style/CommonTextSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="删除" />
+
+            <Button
+                android:id="@+id/btn_update"
+                style="@style/CommonTextSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="更新" />
+
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/CommonTextSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="查询" />
+            <Button
+                android:id="@+id/btn_clean"
+                style="@style/CommonTextSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清空" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_show"
+            style="@style/CommonTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
